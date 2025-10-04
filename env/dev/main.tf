@@ -1,9 +1,10 @@
 module "dev" {
-  source = "../../infra/main.tf"
+  source = "../../infra"
 
-  gcp_project_id = "your-gcp-project-id"
-  region         = "us-central1"
-  zone           = "us-central1-a"
-  instance_name  = "basic-vm"
-  instance_type  = "f1-micro"
+  gcp_project_id = var.gcp_project_id
+  region         = var.region
+  zone           = var.zone
+  instance_name  = var.instance_name
+  instance_type  = var.instance_type
+  developers     = var.developers
 }

@@ -27,13 +27,21 @@ resource "google_compute_instance" "vm_instance" {
     network = google_cloud_compute_network.vpc_network.name
     access_config {}
   }
+
+  metadata = {
+    enable-oslogin = "TRUE"
+  }
 }
 
+resource "google_project_iam_member" "os_acess_login" {
+  for_each = toset(var.developers)
 
+  project = var.gcp_project_id
+
+  role    = "roles/compute.osLogin"
+  member  = "user:${each.value}"
+  
+}
 resource "google_compute_network" "vpc_network" {
   name = "terraform-network"
-}
-
-output "IP_Public" {
-  value = google_compute_instance.vm_instance.network_interface[0].network_ip
 }
