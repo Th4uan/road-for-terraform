@@ -444,7 +444,7 @@ Contribuições são sempre bem-vindas! Este projeto é para fins educacionais e
 **Thauan Rodrigues**
 - 🐙 GitHub: [@Th4uan](https://github.com/Th4uan)
 - 💼 LinkedIn: [Thauan Rodrigues](https://linkedin.com/in/thauan-rodrigues)
-- 📧 Email: [seu-email@email.com]
+- 📧 Email: [dev.thauan.rodrigues@gmail.com]
 
 ## 📄 Licença
 

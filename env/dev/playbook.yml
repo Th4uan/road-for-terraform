@@ -1,0 +1,15 @@
+---
+- hosts: dev-environment
+  tasks:
+    - name: Bem vindo
+      ansible.builtin.debug:
+        msg: "Bem vindo ao ambiente de desenvolvimento" 
+
+    - name: Instalando Python3 e VirtualEnv
+      ansible.builtin.apt:
+        name:
+          - python3
+          - virtualenv
+        update_cache: yes
+      become: yes
+    

@@ -1,10 +1,10 @@
 variable "instance_name" {
-  type = string
+  type        = string
   description = "Nome da máquina a ser instanciada"
 }
 
 variable "instance_type" {
-  type = string
+  type        = string
   description = "Tipo da máquina a ser instanciada"
 }
 
@@ -14,12 +14,12 @@ variable "gcp_project_id" {
 }
 
 variable "region" {
-  type = string
+  type        = string
   description = "Região onde a instância será criada"
 }
 
 variable "zone" {
-  type = string
+  type        = string
   description = "Zona onde a instância será criada"
 }
 
